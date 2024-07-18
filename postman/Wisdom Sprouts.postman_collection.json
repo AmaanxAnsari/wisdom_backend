@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "816e858a-d9d0-461d-892c-f4d6312a0e91",
+		"name": "Wisdom Sprouts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "69087",
+		"_collection_link": "https://bold-trinity-8952.postman.co/workspace/Scalefull~cb2ddd5f-af79-4588-be76-5f5370a4b35f/collection/69087-816e858a-d9d0-461d-892c-f4d6312a0e91?action=share&source=collection_link&creator=69087"
+	},
+	"item": [
+		{
+			"name": "Login Admin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@example.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/admin/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Student",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1M2I3ZTdmNjc3MTE1NzAwOTYzZDE5ZCIsImlhdCI6MTY5ODgyOTQ4OSwiZXhwIjoxNjk4OTE1ODg5fQ.sff5n9ngON3HD1Duw-meREoR7xfWQi7w7MaPsSOaGBA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"sushank\",\r\n    \"lastName\": \"dahiwadkar\",\r\n    \"email\": \"sushankdahiwadkar1@gmail.com\",\r\n    \"password\": \"sushank123\",\r\n    \"mobile\": 9730971652\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/student",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Students",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1M2I3ZTdmNjc3MTE1NzAwOTYzZDE5ZCIsImlhdCI6MTY5ODgyMTgxMCwiZXhwIjoxNjk4OTA4MjEwfQ.G5nJlxk_MfupLwKYAR555UJjURJi0BOpAiKK5tfA1KI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/student",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Student By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1M2I3ZTdmNjc3MTE1NzAwOTYzZDE5ZCIsImlhdCI6MTY5ODgyMTgxMCwiZXhwIjoxNjk4OTA4MjEwfQ.G5nJlxk_MfupLwKYAR555UJjURJi0BOpAiKK5tfA1KI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"sushank\",\r\n    \"lastName\": \"dahiwadkar\",\r\n    \"email\": \"sushankdahiwadkar@gmail.com\",\r\n    \"password\": \"sushank123\",\r\n    \"mobile\": 9730971651\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/student/654214c70c5f1d52054f2f2f",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"student",
+						"654214c70c5f1d52054f2f2f"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

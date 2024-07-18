@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "f5306ed8-7f86-468f-9c78-d275fb649012",
+		"name": "Wisdom_Portal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28208339"
+	},
+	"item": [
+		{
+			"name": "getAllCourses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3010/getAllCourses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"getAllCourses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createCourses",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3010/createCourses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"createCourses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCourse",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n       \r\n        \"name\": \"REACT\",\r\n        \"description\": \"REACT framework\",\r\n        \"overview\": \"web dev\",\r\n        \"image\": \"react.img\",\r\n        \"primaryCategory\": \"Demo Video\",\r\n        \"duration\": 3,\r\n        \"categories\": [\r\n            \"WEB\"\r\n        ],\r\n        \"technologies\": [\r\n            \"REACT\"\r\n        ],\r\n        \"createdAt\": \"2023-11-03T09:41:46.556Z\",\r\n        \"updatedAt\": \"2023-11-03T09:41:46.556Z\",\r\n        \"__v\": 0\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3010/api/updateCourse/6544c05a8eedf80421b78691",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3010",
+					"path": [
+						"api",
+						"updateCourse",
+						"6544c05a8eedf80421b78691"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
